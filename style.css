@@ -57,22 +57,23 @@ h1 {
    CARDS
 ======================= */
 .card {
-  width: 260px;
-  background: white;
-  margin: auto;
+  width: 90%;         /* Take almost full screen on mobile */
+  max-width: 400px;   /* Limit on larger screens */
+  margin: 20px auto;  /* Center the card */
   padding: 15px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  animation: pop 0.5s ease;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  text-align: center;
 }
 
+
 .card img {
-  width: 100%;
-  height: auto;
-  max-height: 280px;
-  object-fit: contain;
-  border-radius: 15px;
+  width: 100%;        /* Fit the card width */
+  height: auto;       /* Keep aspect ratio */
+  border-radius: 10px;
 }
+
 
 .lyric,
 .message {
@@ -434,5 +435,16 @@ h1 {
 #blowBtn:hover, #restartBtn:hover {
   transform: scale(1.07);
   box-shadow: 0 15px 35px rgba(255,0,0,0.4);
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    padding: 10px;
+    font-size: 16px;   /* Slightly smaller text for mobile */
+  }
+
+  .card-text {
+    font-size: 14px;
+  }
 }
 
